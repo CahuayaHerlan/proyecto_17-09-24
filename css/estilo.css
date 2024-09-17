@@ -1,0 +1,97 @@
+.contenedor /*padre*/
+{
+	background:aqua;
+	padding:10px;
+	font-size:25px;
+	text-align:center;
+	display:grid;
+	grid-gap:10px;
+	grid-template-rows: 2fr 1fr 7fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "cabecera    cabecera   cabecera"
+						 "  menu 	  menu	     menu"
+						 " contenido  contenido  publi"
+						 " pie 	      pie 	     pie"
+	 					;
+}
+.contenedor>div
+{
+	background:chartreuse;
+}
+
+.contenedor .cabecera
+{
+	background-color:#FFFF00;
+	grid-column: cabecera;
+}
+
+.contenedor .menu
+{
+	background-color:coral;
+	grid-column: menu;
+}
+
+.contenedor .contenido
+{
+	background-color:beige;
+	grid-column: contenido;
+	padding:20px;
+	
+	display: grid;
+	grid-gap: 10px; 
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 1fr 4fr;
+	grid-template-areas:
+	"titulo titulo"
+	"caja1 caja1";
+
+}
+
+.contenedor .contenido .caja1
+{
+	background-color:#CCFF00;
+	grid-rows:caja1;
+}
+
+.contenedor .contenido .titulo
+{
+	background-color:#CCFF00;
+	grid-column:titulo;
+}
+
+
+.contenedor .publi
+{
+	background-color:#33FF33;
+	grid-column: publi;
+	padding:20px;
+	
+	display: grid;
+	grid-template-rows: 1fr 1fr; 
+	grid-gap: 10px;
+	grid-template-columns: 1fr; 
+	grid-template-rows: 1fr 2fr 2fr;
+	grid-template-areas:
+	"titulo1"
+	"caja2"
+	"caja2";
+}
+
+.contenedor .publi .caja2
+{
+	background-color:#FF9999;
+	grid-columns:caja2;
+}
+
+.contenedor .publi .titulo1
+{
+	background-color:#FF9999;
+	grid-columns:titulo1;
+}
+
+.contenedor .pie
+{
+	background-color:#669966;
+	grid-column: pie;
+}
+
